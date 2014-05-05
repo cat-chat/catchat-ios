@@ -22,6 +22,7 @@
 		5DFB80FC1917989D008AC27D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DFB80FA1917989D008AC27D /* InfoPlist.strings */; };
 		5DFB80FE1917989D008AC27D /* Cat_ChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB80FD1917989D008AC27D /* Cat_ChatTests.m */; };
 		5DFB810B19179EB9008AC27D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFB810A19179EB9008AC27D /* StoreKit.framework */; };
+		5DFB810E1917A797008AC27D /* JDPConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB810D1917A797008AC27D /* JDPConstants.m */; };
 		743C7AF76100482D831C701D /* libPods-Cat Chat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFBB19C062B4CCAB39EB294 /* libPods-Cat Chat.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,8 @@
 		5DFB80FB1917989D008AC27D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5DFB80FD1917989D008AC27D /* Cat_ChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cat_ChatTests.m; sourceTree = "<group>"; };
 		5DFB810A19179EB9008AC27D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		5DFB810C1917A797008AC27D /* JDPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JDPConstants.h; path = Constants/JDPConstants.h; sourceTree = SOURCE_ROOT; };
+		5DFB810D1917A797008AC27D /* JDPConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JDPConstants.m; path = Constants/JDPConstants.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +186,8 @@
 		5DFB810919179D8C008AC27D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5DFB810C1917A797008AC27D /* JDPConstants.h */,
+				5DFB810D1917A797008AC27D /* JDPConstants.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DFB810E1917A797008AC27D /* JDPConstants.m in Sources */,
 				5DFB80DF1917989D008AC27D /* main.m in Sources */,
 				5DFB80E31917989D008AC27D /* JDPAppDelegate.m in Sources */,
 			);
