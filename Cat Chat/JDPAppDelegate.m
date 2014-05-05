@@ -7,7 +7,6 @@
 //
 
 #import "JDPAppDelegate.h"
-#import <Parse/Parse.h>
 #import "JDPConstants.h"
 
 @implementation JDPAppDelegate
