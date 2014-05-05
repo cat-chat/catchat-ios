@@ -20,9 +20,12 @@
 		5DFB80F31917989D008AC27D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFB80D21917989D008AC27D /* Foundation.framework */; };
 		5DFB80F41917989D008AC27D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFB80D61917989D008AC27D /* UIKit.framework */; };
 		5DFB80FC1917989D008AC27D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DFB80FA1917989D008AC27D /* InfoPlist.strings */; };
-		5DFB80FE1917989D008AC27D /* Cat_ChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB80FD1917989D008AC27D /* Cat_ChatTests.m */; };
 		5DFB810B19179EB9008AC27D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFB810A19179EB9008AC27D /* StoreKit.framework */; };
 		5DFB810E1917A797008AC27D /* JDPConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB810D1917A797008AC27D /* JDPConstants.m */; };
+		5DFB81111917B025008AC27D /* JDPSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81101917B025008AC27D /* JDPSplashViewController.m */; };
+		5DFB81141917B296008AC27D /* JDPIdentificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81131917B296008AC27D /* JDPIdentificationViewController.m */; };
+		5DFB81161917B350008AC27D /* JDPIdentificationViewControllerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81151917B350008AC27D /* JDPIdentificationViewControllerTestCase.m */; };
+		5DFB811A1917B588008AC27D /* JDPStoryboardIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81191917B588008AC27D /* JDPStoryboardIdentifiers.m */; };
 		743C7AF76100482D831C701D /* libPods-Cat Chat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFBB19C062B4CCAB39EB294 /* libPods-Cat Chat.a */; };
 /* End PBXBuildFile section */
 
@@ -57,10 +60,16 @@
 		5DFB80F11917989D008AC27D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5DFB80F91917989D008AC27D /* Cat ChatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cat ChatTests-Info.plist"; sourceTree = "<group>"; };
 		5DFB80FB1917989D008AC27D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5DFB80FD1917989D008AC27D /* Cat_ChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cat_ChatTests.m; sourceTree = "<group>"; };
 		5DFB810A19179EB9008AC27D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5DFB810C1917A797008AC27D /* JDPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JDPConstants.h; path = Constants/JDPConstants.h; sourceTree = SOURCE_ROOT; };
 		5DFB810D1917A797008AC27D /* JDPConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JDPConstants.m; path = Constants/JDPConstants.m; sourceTree = SOURCE_ROOT; };
+		5DFB810F1917B025008AC27D /* JDPSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPSplashViewController.h; sourceTree = "<group>"; };
+		5DFB81101917B025008AC27D /* JDPSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPSplashViewController.m; sourceTree = "<group>"; };
+		5DFB81121917B296008AC27D /* JDPIdentificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPIdentificationViewController.h; sourceTree = "<group>"; };
+		5DFB81131917B296008AC27D /* JDPIdentificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPIdentificationViewController.m; sourceTree = "<group>"; };
+		5DFB81151917B350008AC27D /* JDPIdentificationViewControllerTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPIdentificationViewControllerTestCase.m; sourceTree = "<group>"; };
+		5DFB81181917B588008AC27D /* JDPStoryboardIdentifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JDPStoryboardIdentifiers.h; path = "Generated Files/JDPStoryboardIdentifiers.h"; sourceTree = SOURCE_ROOT; };
+		5DFB81191917B588008AC27D /* JDPStoryboardIdentifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JDPStoryboardIdentifiers.m; path = "Generated Files/JDPStoryboardIdentifiers.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +151,7 @@
 		5DFB80D91917989D008AC27D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5DFB811B1917B594008AC27D /* Generated Files */,
 				5DFB80DA1917989D008AC27D /* Cat Chat-Info.plist */,
 				5DFB80DB1917989D008AC27D /* InfoPlist.strings */,
 				5DFB80DE1917989D008AC27D /* main.m */,
@@ -153,7 +163,7 @@
 		5DFB80F71917989D008AC27D /* Cat ChatTests */ = {
 			isa = PBXGroup;
 			children = (
-				5DFB80FD1917989D008AC27D /* Cat_ChatTests.m */,
+				5DFB81151917B350008AC27D /* JDPIdentificationViewControllerTestCase.m */,
 				5DFB80F81917989D008AC27D /* Supporting Files */,
 			);
 			path = "Cat ChatTests";
@@ -171,6 +181,10 @@
 		5DFB810719179D85008AC27D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5DFB810F1917B025008AC27D /* JDPSplashViewController.h */,
+				5DFB81101917B025008AC27D /* JDPSplashViewController.m */,
+				5DFB81121917B296008AC27D /* JDPIdentificationViewController.h */,
+				5DFB81131917B296008AC27D /* JDPIdentificationViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -192,6 +206,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		5DFB811B1917B594008AC27D /* Generated Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DFB81181917B588008AC27D /* JDPStoryboardIdentifiers.h */,
+				5DFB81191917B588008AC27D /* JDPStoryboardIdentifiers.m */,
+			);
+			name = "Generated Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DFB81011917989D008AC27D /* Build configuration list for PBXNativeTarget "Cat Chat" */;
 			buildPhases = (
+				5DFB81171917B45F008AC27D /* Generate Storyboard Constants */,
 				C0DAEE6F369941A5B34C7815 /* Check Pods Manifest.lock */,
 				5DFB80CB1917989D008AC27D /* Sources */,
 				5DFB80CC1917989D008AC27D /* Frameworks */,
@@ -313,6 +337,23 @@
 			shellScript = "\"${SRCROOT}/Pods/Pods-Cat ChatTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5DFB81171917B45F008AC27D /* Generate Storyboard Constants */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Cat Chat/base.lproj/Main.storyboard",
+			);
+			name = "Generate Storyboard Constants";
+			outputPaths = (
+				"$(PROJECT_DIR)/Generated Files/JDPStoryboardIdentifiers.h",
+				"$(PROJECT_DIR)/Generated Files/JDPStoryboardIdentifiers.m",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${PROJECT_DIR}/IdentifierTest/generated\"\n\npython \"${PROJECT_DIR}/Scripts/generate_constants.py\" \"${SCRIPT_OUTPUT_FILE_0}\" \"${SCRIPT_OUTPUT_FILE_1}\"";
+		};
 		9FA2CA83FA074B199FF2C2F4 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,7 +406,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DFB81111917B025008AC27D /* JDPSplashViewController.m in Sources */,
 				5DFB810E1917A797008AC27D /* JDPConstants.m in Sources */,
+				5DFB811A1917B588008AC27D /* JDPStoryboardIdentifiers.m in Sources */,
+				5DFB81141917B296008AC27D /* JDPIdentificationViewController.m in Sources */,
 				5DFB80DF1917989D008AC27D /* main.m in Sources */,
 				5DFB80E31917989D008AC27D /* JDPAppDelegate.m in Sources */,
 			);
@@ -375,7 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DFB80FE1917989D008AC27D /* Cat_ChatTests.m in Sources */,
+				5DFB81161917B350008AC27D /* JDPIdentificationViewControllerTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
