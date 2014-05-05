@@ -26,6 +26,8 @@
 		5DFB81141917B296008AC27D /* JDPIdentificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81131917B296008AC27D /* JDPIdentificationViewController.m */; };
 		5DFB81161917B350008AC27D /* JDPIdentificationViewControllerTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81151917B350008AC27D /* JDPIdentificationViewControllerTestCase.m */; };
 		5DFB811A1917B588008AC27D /* JDPStoryboardIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81191917B588008AC27D /* JDPStoryboardIdentifiers.m */; };
+		5DFB81221917B70C008AC27D /* UIStoryboard+Cat_Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81211917B70C008AC27D /* UIStoryboard+Cat_Chat.m */; };
+		5DFB81261917BA19008AC27D /* UIColor+CatChat_Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81251917BA19008AC27D /* UIColor+CatChat_Colors.m */; };
 		743C7AF76100482D831C701D /* libPods-Cat Chat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFBB19C062B4CCAB39EB294 /* libPods-Cat Chat.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,10 @@
 		5DFB81151917B350008AC27D /* JDPIdentificationViewControllerTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPIdentificationViewControllerTestCase.m; sourceTree = "<group>"; };
 		5DFB81181917B588008AC27D /* JDPStoryboardIdentifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JDPStoryboardIdentifiers.h; path = "Generated Files/JDPStoryboardIdentifiers.h"; sourceTree = SOURCE_ROOT; };
 		5DFB81191917B588008AC27D /* JDPStoryboardIdentifiers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JDPStoryboardIdentifiers.m; path = "Generated Files/JDPStoryboardIdentifiers.m"; sourceTree = SOURCE_ROOT; };
+		5DFB81201917B70C008AC27D /* UIStoryboard+Cat_Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Cat_Chat.h"; sourceTree = "<group>"; };
+		5DFB81211917B70C008AC27D /* UIStoryboard+Cat_Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Cat_Chat.m"; sourceTree = "<group>"; };
+		5DFB81241917BA19008AC27D /* UIColor+CatChat_Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CatChat_Colors.h"; sourceTree = "<group>"; };
+		5DFB81251917BA19008AC27D /* UIColor+CatChat_Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CatChat_Colors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 				5DFB80E11917989D008AC27D /* JDPAppDelegate.h */,
 				5DFB80E21917989D008AC27D /* JDPAppDelegate.m */,
 				5DFB810919179D8C008AC27D /* Model */,
+				5DFB81231917B710008AC27D /* Categories */,
 				5DFB810819179D89008AC27D /* View */,
 				5DFB810719179D85008AC27D /* Controller */,
 				5DFB80EA1917989D008AC27D /* Images.xcassets */,
@@ -213,6 +220,17 @@
 				5DFB81191917B588008AC27D /* JDPStoryboardIdentifiers.m */,
 			);
 			name = "Generated Files";
+			sourceTree = "<group>";
+		};
+		5DFB81231917B710008AC27D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5DFB81201917B70C008AC27D /* UIStoryboard+Cat_Chat.h */,
+				5DFB81211917B70C008AC27D /* UIStoryboard+Cat_Chat.m */,
+				5DFB81241917BA19008AC27D /* UIColor+CatChat_Colors.h */,
+				5DFB81251917BA19008AC27D /* UIColor+CatChat_Colors.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +427,8 @@
 				5DFB81111917B025008AC27D /* JDPSplashViewController.m in Sources */,
 				5DFB810E1917A797008AC27D /* JDPConstants.m in Sources */,
 				5DFB811A1917B588008AC27D /* JDPStoryboardIdentifiers.m in Sources */,
+				5DFB81221917B70C008AC27D /* UIStoryboard+Cat_Chat.m in Sources */,
+				5DFB81261917BA19008AC27D /* UIColor+CatChat_Colors.m in Sources */,
 				5DFB81141917B296008AC27D /* JDPIdentificationViewController.m in Sources */,
 				5DFB80DF1917989D008AC27D /* main.m in Sources */,
 				5DFB80E31917989D008AC27D /* JDPAppDelegate.m in Sources */,
