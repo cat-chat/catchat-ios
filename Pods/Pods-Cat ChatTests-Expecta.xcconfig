@@ -1,0 +1,1 @@
+PODS_CAT_CHATTESTS_EXPECTA_OTHER_LDFLAGS = -framework Foundation
