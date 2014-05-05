@@ -10,4 +10,7 @@
 
 @interface JDPConstants : NSObject
 
+extern NSString * const JDPParseApplicationID;
+extern NSString * const JDPParseClientKey;
+
 @end

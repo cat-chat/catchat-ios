@@ -7,12 +7,19 @@
 //
 
 #import "JDPAppDelegate.h"
+#import <Parse/Parse.h>
+#import "JDPConstants.h"
 
 @implementation JDPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Parse setApplicationId:JDPParseApplicationID
+                  clientKey:JDPParseClientKey];
+
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+
     return YES;
 }
 							
