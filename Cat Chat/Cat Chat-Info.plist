@@ -36,5 +36,18 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>FacebookDisplayName</key>
+	<string>Cat Chat</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb293313764165594</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>293313764165594</string>
 </dict>
 </plist>
