@@ -17,6 +17,8 @@
     // Override point for customization after application launch.
     [Parse setApplicationId:JDPParseApplicationID
                   clientKey:JDPParseClientKey];
+    
+    [PFFacebookUtils initializeFacebook];
 
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 
