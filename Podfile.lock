@@ -3,12 +3,14 @@ PODS:
   - Expecta (0.3.0)
   - Facebook-iOS-SDK (3.14.0):
     - Bolts
+  - JVFloatLabeledTextField (0.0.8)
   - OCMock (2.2.4)
   - Parse (1.2.19):
     - Facebook-iOS-SDK (~> 3.11)
 
 DEPENDENCIES:
   - Expecta
+  - JVFloatLabeledTextField
   - OCMock
   - Parse
 
@@ -16,6 +18,7 @@ SPEC CHECKSUMS:
   Bolts: dc620a31cf67c29bce3e3d14a07a12e797a1a154
   Expecta: 322f1dc42610106a5ba9871b4924cf1635d80833
   Facebook-iOS-SDK: 63e19ff8d275d63b765819f492a4e71e445f9822
+  JVFloatLabeledTextField: 53177a74ff6f3f0dddd165cf6cab01d1e4433a9b
   OCMock: 5008fae4b4789b8fc3e48cd7660f2eb5ef8ce89e
   Parse: 3739f0b211c49115bad96d6b0969b804d4da2f24
 

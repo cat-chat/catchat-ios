@@ -3,6 +3,7 @@
 
 target "Cat Chat" do
 pod 'Parse'
+pod 'JVFloatLabeledTextField'
 end
 
 target "Cat ChatTests" do
