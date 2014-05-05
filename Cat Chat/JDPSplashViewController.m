@@ -7,28 +7,35 @@
 //
 
 #import "JDPSplashViewController.h"
+//view
 #import "JDPStoryboardIdentifiers.h"
+//controller
+#import "JDPIdentificationViewController.h"
 
 @interface JDPSplashViewController ()
+
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
 
 @end
 
 @implementation JDPSplashViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    JDPIdentificationViewController * controller = segue.destinationViewController;
+
+    if ([segue.identifier isEqualToString:JDPLoginSegue]) {
+        controller.identificationMode = JDPIdentificationModeLogin;
+    }
+    if ([segue.identifier isEqualToString:JDPSignupSegue]) {
+        controller.identificationMode = JDPIdentificationModeSignUp;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,15 +44,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)tappedFacebookButton:(UIButton *)sender {
+    NSArray * readPermissions = @[@"email"];
+    [PFFacebookUtils logInWithPermissions:readPermissions
+                                    block:^(PFUser *user, NSError *error) {
+                                        NSLog(@"hooray");
+                                    }];
 }
-*/
 
 @end

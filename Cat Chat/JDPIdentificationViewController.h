@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, JDPIdentificationMode) {
+    JDPIdentificationModeSignUp,
+    JDPIdentificationModeLogin
+};
+
 @interface JDPIdentificationViewController : UITableViewController
+
+@property (nonatomic) JDPIdentificationMode identificationMode;
 
 @end

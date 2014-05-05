@@ -62,5 +62,4 @@
     expect(cell.selectionStyle).to.equal(UITableViewCellSelectionStyleNone);
 }
 
-
 @end
