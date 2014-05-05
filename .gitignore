@@ -6,6 +6,9 @@
 #
 # Pods/
 
+# Constants (contains secret keys etc)
+JDPConstants.m
+
 # Xcode
 .DS_Store
 */build/*
