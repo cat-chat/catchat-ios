@@ -28,6 +28,7 @@
 		5DFB811A1917B588008AC27D /* JDPStoryboardIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81191917B588008AC27D /* JDPStoryboardIdentifiers.m */; };
 		5DFB81221917B70C008AC27D /* UIStoryboard+Cat_Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81211917B70C008AC27D /* UIStoryboard+Cat_Chat.m */; };
 		5DFB81261917BA19008AC27D /* UIColor+CatChat_Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81251917BA19008AC27D /* UIColor+CatChat_Colors.m */; };
+		5DFB81291917C061008AC27D /* JDPInboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81281917C061008AC27D /* JDPInboxViewController.m */; };
 		743C7AF76100482D831C701D /* libPods-Cat Chat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFBB19C062B4CCAB39EB294 /* libPods-Cat Chat.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,8 @@
 		5DFB81211917B70C008AC27D /* UIStoryboard+Cat_Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Cat_Chat.m"; sourceTree = "<group>"; };
 		5DFB81241917BA19008AC27D /* UIColor+CatChat_Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CatChat_Colors.h"; sourceTree = "<group>"; };
 		5DFB81251917BA19008AC27D /* UIColor+CatChat_Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CatChat_Colors.m"; sourceTree = "<group>"; };
+		5DFB81271917C061008AC27D /* JDPInboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPInboxViewController.h; sourceTree = "<group>"; };
+		5DFB81281917C061008AC27D /* JDPInboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPInboxViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,10 +191,9 @@
 		5DFB810719179D85008AC27D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5DFB810F1917B025008AC27D /* JDPSplashViewController.h */,
-				5DFB81101917B025008AC27D /* JDPSplashViewController.m */,
-				5DFB81121917B296008AC27D /* JDPIdentificationViewController.h */,
-				5DFB81131917B296008AC27D /* JDPIdentificationViewController.m */,
+				5DFB81271917C061008AC27D /* JDPInboxViewController.h */,
+				5DFB81281917C061008AC27D /* JDPInboxViewController.m */,
+				5DFB812A1917C20A008AC27D /* Login */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -231,6 +233,17 @@
 				5DFB81251917BA19008AC27D /* UIColor+CatChat_Colors.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		5DFB812A1917C20A008AC27D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5DFB810F1917B025008AC27D /* JDPSplashViewController.h */,
+				5DFB81101917B025008AC27D /* JDPSplashViewController.m */,
+				5DFB81121917B296008AC27D /* JDPIdentificationViewController.h */,
+				5DFB81131917B296008AC27D /* JDPIdentificationViewController.m */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +444,7 @@
 				5DFB81261917BA19008AC27D /* UIColor+CatChat_Colors.m in Sources */,
 				5DFB81141917B296008AC27D /* JDPIdentificationViewController.m in Sources */,
 				5DFB80DF1917989D008AC27D /* main.m in Sources */,
+				5DFB81291917C061008AC27D /* JDPInboxViewController.m in Sources */,
 				5DFB80E31917989D008AC27D /* JDPAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
