@@ -1,0 +1,27 @@
+/* try logging in? */
+"alert.text.login?" = "We can try logging you in instead if you like?"; /* NEW */
+
+/* the user already exists */
+"alert.title.userExists" = "Account Already Exists"; /* NEW */
+
+/* login button on identity controller */
+"Login cell" = "Log In"; /* NEW */
+
+/* navigation bar title */
+"Login Title" = "Log In to Cat Chat"; /* NEW */
+
+/* sign up button on idetity contrller */
+"Sign Up cell" = "Sign Up to Cat Chat"; /* NEW */
+
+/* navigation bar title */
+"Signup Title" = "Sign Up"; /* NEW */
+
+/* email placeholder */
+"textfield.placeholder.email" = "Email"; /* NEW */
+
+/* suggest the user makes a longer password */
+"textfield.placeholder.makeLongerPassword" = "Try making a longer password"; /* NEW */
+
+/* password placeholder */
+"textfield.placeholder.password" = "Password"; /* NEW */
+
