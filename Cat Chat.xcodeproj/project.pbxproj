@@ -53,6 +53,7 @@
 		5DF1EBFF191E790C00A7CFF2 /* JDPTextfieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPTextfieldTableViewCell.h; sourceTree = "<group>"; };
 		5DF1EC00191E790C00A7CFF2 /* JDPTextfieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPTextfieldTableViewCell.m; sourceTree = "<group>"; };
 		5DF1EC0D191E8AE400A7CFF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5DF1EC0E191E91CE00A7CFF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5DFB80CF1917989D008AC27D /* Cat Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cat Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFB80D21917989D008AC27D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5DFB80D41917989D008AC27D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -502,6 +503,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5DF1EC0D191E8AE400A7CFF2 /* Base */,
+				5DF1EC0E191E91CE00A7CFF2 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
