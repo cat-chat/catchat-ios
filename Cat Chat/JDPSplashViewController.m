@@ -45,10 +45,13 @@
 }
 
 - (IBAction)tappedFacebookButton:(UIButton *)sender {
-    NSArray * readPermissions = @[@"email"];
+    NSArray * readPermissions = @[@"public_profile", @"email"];
     [PFFacebookUtils logInWithPermissions:readPermissions
                                     block:^(PFUser *user, NSError *error) {
-                                        NSLog(@"hooray");
+                                        if (user) {
+                                            [self performSegueWithIdentifier:JDPFacebookSuccessSegue
+                                                                      sender:self];
+                                        }
                                     }];
 }
 
