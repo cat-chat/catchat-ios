@@ -109,10 +109,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.37647058820000001" green="0.84313725490000002" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.0" green="0.66666666669999997" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Your Details" id="oc9-jV-MAX">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pkT-ya-sdU">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pkT-ya-sdU" customClass="JDPTextfieldTableViewCell">
                                         <rect key="frame" x="0.0" y="119" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pkT-ya-sdU" id="Blw-zT-9ej">
@@ -131,8 +132,11 @@
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="HhB-lN-nXv" id="mKq-0T-4qq"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="AxA-5O-1aN">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="AxA-5O-1aN" customClass="JDPTextfieldTableViewCell">
                                         <rect key="frame" x="0.0" y="173" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AxA-5O-1aN" id="Ti5-vD-NEh">
@@ -151,6 +155,9 @@
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="Bxh-Qv-QCj" id="QkP-sn-6dO"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -172,8 +179,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.99215686270000003" green="0.63529411759999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.99215686270000003" green="0.63529411759999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -187,8 +194,8 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="actionCell" destination="K0m-Ns-MgD" id="u7R-Wg-XtO"/>
-                        <outlet property="emailAddressTextField" destination="HhB-lN-nXv" id="xoA-6r-tfH"/>
-                        <outlet property="passwordTextField" destination="Bxh-Qv-QCj" id="VES-IC-bp5"/>
+                        <outlet property="emailAddressCell" destination="pkT-ya-sdU" id="DhP-zT-Yjh"/>
+                        <outlet property="passwordCell" destination="AxA-5O-1aN" id="9ha-k8-maj"/>
                         <segue destination="OEU-Jd-RZo" kind="unwind" identifier="authenticationSuccessSegue" unwindAction="unwindToInbox:" id="HQF-1a-KYu"/>
                     </connections>
                 </tableViewController>
@@ -224,6 +231,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Inbox" id="2g4-iP-Kwe">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="ATw-LB-hmL">
+                            <connections>
+                                <action selector="logoutButtonTapped:" destination="2Im-bh-6nA" id="4e9-XX-L3C"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="zpf-ux-2wm">
                             <connections>
                                 <segue destination="OCh-8Y-KKr" kind="modal" identifier="composeSnapcatSegue" id="IQz-bj-mHM"/>
