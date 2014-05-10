@@ -26,4 +26,8 @@
     return [UIColor colorWithRed:0.99 green:0.64 blue:0.44 alpha:1];
 }
 
++(instancetype)catChatLightErrorColor{
+    return [UIColor colorWithRed:1 green:0.65 blue:0.62 alpha:1];
+}
+
 @end

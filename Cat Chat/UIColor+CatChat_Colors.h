@@ -14,5 +14,6 @@
 +(instancetype)catChatDarkGreenColor;
 +(instancetype)catChatOrangeColor;
 +(instancetype)catChatLightOrangeColor;
++(instancetype)catChatLightErrorColor;
 
 @end
