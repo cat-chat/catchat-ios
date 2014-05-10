@@ -148,7 +148,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" red="0.20000000000000001" green="0.69803921570000005" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="N4I-mw-iEn" id="148-qn-CBZ"/>
                                                     </connections>
