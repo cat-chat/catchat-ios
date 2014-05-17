@@ -10,22 +10,18 @@
 
 @implementation JDPCatThumbnailCell
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+-(UIImage *)randomLoadingImage{
+    NSUInteger randomNumber = arc4random_uniform(5);
+    NSString * loadingImageName = [NSString stringWithFormat:@"loading%d",randomNumber];
+    return [UIImage imageNamed:loadingImageName];
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+-(void)awakeFromNib{
+    self.imageView.image = [self randomLoadingImage];
 }
-*/
+
+-(void)prepareForReuse{
+    self.imageView.image = [self randomLoadingImage];
+}
 
 @end

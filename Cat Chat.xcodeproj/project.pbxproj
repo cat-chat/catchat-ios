@@ -10,6 +10,7 @@
 		3235207BE89F4586BE3D7200 /* libPods-Cat ChatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 402C4145A4624A78BE694936 /* libPods-Cat ChatTests.a */; };
 		5DF1EC01191E790C00A7CFF2 /* JDPTextfieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1EC00191E790C00A7CFF2 /* JDPTextfieldTableViewCell.m */; };
 		5DF1EC0A191E8AE300A7CFF2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DF1EC0C191E8AE300A7CFF2 /* Localizable.strings */; };
+		5DF1EC0F191E954300A7CFF2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFB810A19179EB9008AC27D /* StoreKit.framework */; };
 		5DFB80DD1917989D008AC27D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DFB80DB1917989D008AC27D /* InfoPlist.strings */; };
 		5DFB80DF1917989D008AC27D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB80DE1917989D008AC27D /* main.m */; };
 		5DFB80E31917989D008AC27D /* JDPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB80E21917989D008AC27D /* JDPAppDelegate.m */; };
@@ -103,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				743C7AF76100482D831C701D /* libPods-Cat Chat.a in Frameworks */,
+				5DF1EC0F191E954300A7CFF2 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +619,6 @@
 				GCC_PREFIX_HEADER = "Cat Chat/Cat Chat-Prefix.pch";
 				INFOPLIST_FILE = "Cat Chat/Cat Chat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -634,7 +635,6 @@
 				GCC_PREFIX_HEADER = "Cat Chat/Cat Chat-Prefix.pch";
 				INFOPLIST_FILE = "Cat Chat/Cat Chat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

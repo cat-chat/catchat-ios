@@ -71,5 +71,10 @@
     
 }
 
+- (IBAction)logoutButtonTapped:(id)sender {
+    [PFUser logOut];
+    [self performSegueWithIdentifier:JDPSplashSegue
+                              sender:nil];
+}
 
 @end
