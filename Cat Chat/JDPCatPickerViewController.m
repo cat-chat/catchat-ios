@@ -24,6 +24,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    PFQuery * query = [PFQuery queryWithClassName:@"CatImage"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects) {
+            self.catImages = objects;
+            [self.collectionView reloadData];
+        }
+    }];
 }
 
 
@@ -35,14 +42,6 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-
-    PFQuery * query = [PFQuery queryWithClassName:@"CatImage"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (objects) {
-            self.catImages = objects;
-            [self.collectionView reloadData];
-        }
-    }];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -70,8 +69,15 @@
 
     PFObject * catImage = self.catImages[indexPath.row];
     PFFile * file = catImage[@"thumbnail"];
-    NSData * data = [file getData];
-    cell.imageView.image = [UIImage imageWithData:data];
+    [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        JDPCatThumbnailCell * currentCell = (JDPCatThumbnailCell *)[collectionView cellForItemAtIndexPath:indexPath];
+        [UIView transitionWithView:currentCell.imageView
+                          duration:0.2f
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:^{
+                            currentCell.imageView.image = [UIImage imageWithData:data];
+                        } completion:NULL];
+    }];
     return cell;
 }
 
