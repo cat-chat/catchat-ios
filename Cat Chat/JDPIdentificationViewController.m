@@ -8,6 +8,7 @@
 
 #import "JDPIdentificationViewController.h"
 //view
+#import "JDPStoryboardIdentifiers.h"
 #import <JVFloatLabeledTextField/JVFloatLabeledTextField.h>
 
 @interface JDPIdentificationViewController ()
@@ -59,10 +60,20 @@
     NSString * email = self.emailAddressTextField.text;
     NSString * password = self.passwordTextField.text;
 
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+
     [PFUser logInWithUsernameInBackground:email
                                  password:password
                                     block:^(PFUser *user, NSError *error) {
+                                        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
 
+                                        if (user) {
+                                            [self performSegueWithIdentifier:JDPAuthenticationSuccessSegue
+                                                                      sender:self];
+                                        }
+                                        else {
+                                            
+                                        }
                                     }];
 }
 
@@ -75,8 +86,18 @@
     user.email = email;
     user.password = password;
 
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        
+        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+
+        if (succeeded) {
+            [self performSegueWithIdentifier:JDPAuthenticationSuccessSegue
+                                      sender:self];
+        }
+        else{
+            //handle errors
+        }
     }];
 }
 
@@ -89,13 +110,15 @@
     return indexPath;
 }
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     switch (self.identificationMode) {
         case JDPIdentificationModeLogin:
+            [self login];
             break;
         case JDPIdentificationModeSignUp:
         default:
+            [self signup];
             break;
     }
 }

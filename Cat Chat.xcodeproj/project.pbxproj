@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3235207BE89F4586BE3D7200 /* libPods-Cat ChatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 402C4145A4624A78BE694936 /* libPods-Cat ChatTests.a */; };
-		5DFB80D31917989D008AC27D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFB80D21917989D008AC27D /* Foundation.framework */; };
-		5DFB80D51917989D008AC27D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFB80D41917989D008AC27D /* CoreGraphics.framework */; };
-		5DFB80D71917989D008AC27D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFB80D61917989D008AC27D /* UIKit.framework */; };
 		5DFB80DD1917989D008AC27D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DFB80DB1917989D008AC27D /* InfoPlist.strings */; };
 		5DFB80DF1917989D008AC27D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB80DE1917989D008AC27D /* main.m */; };
 		5DFB80E31917989D008AC27D /* JDPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB80E21917989D008AC27D /* JDPAppDelegate.m */; };
@@ -20,7 +17,6 @@
 		5DFB80F31917989D008AC27D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFB80D21917989D008AC27D /* Foundation.framework */; };
 		5DFB80F41917989D008AC27D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFB80D61917989D008AC27D /* UIKit.framework */; };
 		5DFB80FC1917989D008AC27D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DFB80FA1917989D008AC27D /* InfoPlist.strings */; };
-		5DFB810B19179EB9008AC27D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFB810A19179EB9008AC27D /* StoreKit.framework */; };
 		5DFB810E1917A797008AC27D /* JDPConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB810D1917A797008AC27D /* JDPConstants.m */; };
 		5DFB81111917B025008AC27D /* JDPSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81101917B025008AC27D /* JDPSplashViewController.m */; };
 		5DFB81141917B296008AC27D /* JDPIdentificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81131917B296008AC27D /* JDPIdentificationViewController.m */; };
@@ -29,6 +25,12 @@
 		5DFB81221917B70C008AC27D /* UIStoryboard+Cat_Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81211917B70C008AC27D /* UIStoryboard+Cat_Chat.m */; };
 		5DFB81261917BA19008AC27D /* UIColor+CatChat_Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81251917BA19008AC27D /* UIColor+CatChat_Colors.m */; };
 		5DFB81291917C061008AC27D /* JDPInboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81281917C061008AC27D /* JDPInboxViewController.m */; };
+		5DFB812D1917EF76008AC27D /* JDPCatThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB812C1917EF76008AC27D /* JDPCatThumbnailCell.m */; };
+		5DFB81301917EF9A008AC27D /* JDPCatPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB812F1917EF9A008AC27D /* JDPCatPickerViewController.m */; };
+		5DFB81331917EFAF008AC27D /* JDPSnapCatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81321917EFAF008AC27D /* JDPSnapCatViewController.m */; };
+		5DFB81361917EFC7008AC27D /* JDPContactPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB81351917EFC7008AC27D /* JDPContactPickerViewController.m */; };
+		5DFB813C1917F2DA008AC27D /* JDPCatImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB813B1917F2DA008AC27D /* JDPCatImageStore.m */; };
+		5DFB813E1917F867008AC27D /* JDPCatLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DFB813D1917F867008AC27D /* JDPCatLabel.xib */; };
 		743C7AF76100482D831C701D /* libPods-Cat Chat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFBB19C062B4CCAB39EB294 /* libPods-Cat Chat.a */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,17 @@
 		5DFB81251917BA19008AC27D /* UIColor+CatChat_Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CatChat_Colors.m"; sourceTree = "<group>"; };
 		5DFB81271917C061008AC27D /* JDPInboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPInboxViewController.h; sourceTree = "<group>"; };
 		5DFB81281917C061008AC27D /* JDPInboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPInboxViewController.m; sourceTree = "<group>"; };
+		5DFB812B1917EF76008AC27D /* JDPCatThumbnailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPCatThumbnailCell.h; sourceTree = "<group>"; };
+		5DFB812C1917EF76008AC27D /* JDPCatThumbnailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPCatThumbnailCell.m; sourceTree = "<group>"; };
+		5DFB812E1917EF9A008AC27D /* JDPCatPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPCatPickerViewController.h; sourceTree = "<group>"; };
+		5DFB812F1917EF9A008AC27D /* JDPCatPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPCatPickerViewController.m; sourceTree = "<group>"; };
+		5DFB81311917EFAF008AC27D /* JDPSnapCatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPSnapCatViewController.h; sourceTree = "<group>"; };
+		5DFB81321917EFAF008AC27D /* JDPSnapCatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPSnapCatViewController.m; sourceTree = "<group>"; };
+		5DFB81341917EFC7008AC27D /* JDPContactPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPContactPickerViewController.h; sourceTree = "<group>"; };
+		5DFB81351917EFC7008AC27D /* JDPContactPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPContactPickerViewController.m; sourceTree = "<group>"; };
+		5DFB813A1917F2DA008AC27D /* JDPCatImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPCatImageStore.h; sourceTree = "<group>"; };
+		5DFB813B1917F2DA008AC27D /* JDPCatImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPCatImageStore.m; sourceTree = "<group>"; };
+		5DFB813D1917F867008AC27D /* JDPCatLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JDPCatLabel.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DFB80D51917989D008AC27D /* CoreGraphics.framework in Frameworks */,
-				5DFB80D71917989D008AC27D /* UIKit.framework in Frameworks */,
-				5DFB810B19179EB9008AC27D /* StoreKit.framework in Frameworks */,
-				5DFB80D31917989D008AC27D /* Foundation.framework in Frameworks */,
 				743C7AF76100482D831C701D /* libPods-Cat Chat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +203,12 @@
 				5DFB81271917C061008AC27D /* JDPInboxViewController.h */,
 				5DFB81281917C061008AC27D /* JDPInboxViewController.m */,
 				5DFB812A1917C20A008AC27D /* Login */,
+				5DFB812E1917EF9A008AC27D /* JDPCatPickerViewController.h */,
+				5DFB812F1917EF9A008AC27D /* JDPCatPickerViewController.m */,
+				5DFB81311917EFAF008AC27D /* JDPSnapCatViewController.h */,
+				5DFB81321917EFAF008AC27D /* JDPSnapCatViewController.m */,
+				5DFB81341917EFC7008AC27D /* JDPContactPickerViewController.h */,
+				5DFB81351917EFC7008AC27D /* JDPContactPickerViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -202,6 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				5DFB80E41917989D008AC27D /* Main.storyboard */,
+				5DFB812B1917EF76008AC27D /* JDPCatThumbnailCell.h */,
+				5DFB812C1917EF76008AC27D /* JDPCatThumbnailCell.m */,
+				5DFB813D1917F867008AC27D /* JDPCatLabel.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -211,6 +229,8 @@
 			children = (
 				5DFB810C1917A797008AC27D /* JDPConstants.h */,
 				5DFB810D1917A797008AC27D /* JDPConstants.m */,
+				5DFB813A1917F2DA008AC27D /* JDPCatImageStore.h */,
+				5DFB813B1917F2DA008AC27D /* JDPCatImageStore.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -338,6 +358,7 @@
 			files = (
 				5DFB80EB1917989D008AC27D /* Images.xcassets in Resources */,
 				5DFB80DD1917989D008AC27D /* InfoPlist.strings in Resources */,
+				5DFB813E1917F867008AC27D /* JDPCatLabel.xib in Resources */,
 				5DFB80E61917989D008AC27D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,11 +461,16 @@
 				5DFB81111917B025008AC27D /* JDPSplashViewController.m in Sources */,
 				5DFB810E1917A797008AC27D /* JDPConstants.m in Sources */,
 				5DFB811A1917B588008AC27D /* JDPStoryboardIdentifiers.m in Sources */,
+				5DFB81301917EF9A008AC27D /* JDPCatPickerViewController.m in Sources */,
+				5DFB81331917EFAF008AC27D /* JDPSnapCatViewController.m in Sources */,
 				5DFB81221917B70C008AC27D /* UIStoryboard+Cat_Chat.m in Sources */,
+				5DFB81361917EFC7008AC27D /* JDPContactPickerViewController.m in Sources */,
 				5DFB81261917BA19008AC27D /* UIColor+CatChat_Colors.m in Sources */,
 				5DFB81141917B296008AC27D /* JDPIdentificationViewController.m in Sources */,
 				5DFB80DF1917989D008AC27D /* main.m in Sources */,
 				5DFB81291917C061008AC27D /* JDPInboxViewController.m in Sources */,
+				5DFB813C1917F2DA008AC27D /* JDPCatImageStore.m in Sources */,
+				5DFB812D1917EF76008AC27D /* JDPCatThumbnailCell.m in Sources */,
 				5DFB80E31917989D008AC27D /* JDPAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
