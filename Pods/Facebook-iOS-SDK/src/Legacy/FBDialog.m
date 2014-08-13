@@ -498,11 +498,11 @@ static BOOL FBIsDeviceIPad() {
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     // 102 == WebKitErrorFrameLoadInterruptedByPolicyChange
-    // -999 == "Operation could not be completed", note -999 occurs when the user clicks away before
-    // the page has completely loaded, if we find cases where we want this to result in dialog failure
-    // (usually this just means quick-user), then we should add something more robust here to account
-    // for differences in application needs
-    if (!(([error.domain isEqualToString:@"NSURLErrorDomain"] && error.code == -999) ||
+    // NSURLErrorCancelled == "Operation could not be completed", note NSURLErrorCancelled occurs when
+    // the user clicks away before the page has completely loaded, if we find cases where we want this
+    // to result in dialog failure (usually this just means quick-user), then we should add something
+    // more robust here to account for differences in application needs
+    if (!(([error.domain isEqualToString:NSURLErrorDomain] && error.code == NSURLErrorCancelled) ||
           ([error.domain isEqualToString:@"WebKitErrorDomain"] && error.code == 102))) {
         [self dismissWithError:error animated:YES];
     }
@@ -619,7 +619,7 @@ static BOOL FBIsDeviceIPad() {
     if ([FBSettings restrictedTreatment] == FBRestrictedTreatmentYES) {
         if ([_delegate respondsToSelector:@selector(dialog:didFailWithError:)]) {
             NSError *error = [NSError errorWithDomain:FacebookSDKDomain
-                                                 code:FBErrorOperationDisallowedForRestrictedTreament
+                                                 code:FBErrorOperationDisallowedForRestrictedTreatment
                                              userInfo:nil];
             [_delegate dialog:self didFailWithError:error];
         }

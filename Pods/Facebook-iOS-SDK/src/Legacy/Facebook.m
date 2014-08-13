@@ -18,13 +18,14 @@
 
 #import "FBError.h"
 #import "FBFrictionlessRequestSettings.h"
+#import "FBInternalSettings.h"
 #import "FBLogger.h"
 #import "FBLoginDialog.h"
 #import "FBRequest.h"
+#import "FBRequest+Internal.h"
 #import "FBSession+Internal.h"
 #import "FBSessionManualTokenCachingStrategy.h"
 #import "FBSessionUtility.h"
-#import "FBSettings.h"
 #import "FBUtility.h"
 
 static NSString *kRedirectURL = @"fbconnect://success";
@@ -238,11 +239,10 @@ static NSString *const FBexpirationDatePropertyName = @"expirationDate";
     NSMutableDictionary *params = [[[NSMutableDictionary alloc] init] autorelease];
     for (NSString *pair in pairs) {
         NSArray *kv = [pair componentsSeparatedByString:@"="];
-        NSString *val =
-        [[kv objectAtIndex:1]
-         stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-
-        [params setObject:val forKey:[kv objectAtIndex:0]];
+        if ([kv count] > 1) {
+            [params setObject:[[kv objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
+                       forKey:[kv objectAtIndex:0]];
+        }
     }
     return params;
 }
@@ -372,9 +372,11 @@ static NSString *const FBexpirationDatePropertyName = @"expirationDate";
     }
     _isExtendingAccessToken = YES;
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                   @"auth.extendSSOAccessToken", @"method",
+                                   @"fb_extend_sso_token", @"grant_type",
                                    nil];
-    _requestExtendingAccessToken = [self requestWithParams:params andDelegate:self];
+    _requestExtendingAccessToken = [self requestWithGraphPath:@"oauth/access_token"
+                                                    andParams:params
+                                                  andDelegate:self];
 }
 
 /**
@@ -672,7 +674,7 @@ static NSString *const FBexpirationDatePropertyName = @"expirationDate";
     [params setObject:kRedirectURL forKey:@"redirect_uri"];
 
     if ([action isEqualToString:kLogin]) {
-        [params setObject:FBLoginUXResponseTypeToken forKey:FBLoginUXResponseType];
+        [params setObject:FBLoginUXResponseTypeTokenAndSignedRequest forKey:FBLoginUXResponseType];
         _fbDialog = [[FBLoginDialog alloc] initWithURL:dialogURL loginParams:params delegate:self];
     } else {
         [params setObject:_appId forKey:@"app_id"];
