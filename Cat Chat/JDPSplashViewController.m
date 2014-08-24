@@ -46,8 +46,10 @@
 
 - (IBAction)tappedFacebookButton:(UIButton *)sender {
     NSArray * readPermissions = @[@"public_profile", @"email"];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     [PFFacebookUtils logInWithPermissions:readPermissions
                                     block:^(PFUser *user, NSError *error) {
+                                        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
                                         if (user) {
                                             [self performSegueWithIdentifier:JDPFacebookSuccessSegue
                                                                       sender:self];
