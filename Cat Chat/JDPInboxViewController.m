@@ -10,29 +10,27 @@
 #import "JDPStoryboardIdentifiers.h"
 
 @interface JDPInboxViewController ()
-
+@property (nonatomic, strong) NSArray * messages;
+@property (nonatomic, strong) NSDateFormatter * dateFormatter;
 @end
 
 @implementation JDPInboxViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    self.dateFormatter = [[NSDateFormatter alloc] init];
+    self.dateFormatter.locale = [NSLocale currentLocale];
+    self.dateFormatter.doesRelativeDateFormatting = YES;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    PFQuery * query = [PFQuery queryWithClassName:@"Message"];
+    [query orderByDescending:@"messageDate"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.messages = objects;
+        [self.tableView reloadData];
+    }];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -49,20 +47,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDatasource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 0;
+    return self.messages.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:JDPMessageCell];
+
+    PFObject * message = self.messages[indexPath.row];
+
+    return cell;
 }
 
 #pragma mark - target action
